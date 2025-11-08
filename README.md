@@ -43,6 +43,32 @@ Ingresar a "Manage Jenkins" -> "System Configuration" -> "Tools"
 <img src="images/jenkins_tools_2.png" alt="Jenkins Tools" width="600"/>
 <img src="images/jenkins_tools_3.png" alt="Jenkins Tools" width="600"/>
 
+### Paso 9 : Crear un pipeline en Jenkins
+
+<img src="images/pipeline_create.png" alt="Jenkins Pipeline" width="600"/>
 
 
-
+### Paso 10: Configurar el pipeline
+- Seleccionar "Pipeline script"
+- Ingresar el siguiente script:
+```
+pipeline {
+    
+    agent any
+    
+    stages {
+        stage('Clone') {
+            steps {
+                sh 'rm -rf m6-sbp-c05-micro-user-service' // remove m6-sbp-c05-micro-user-service
+                // Get some code from a GitHub repository
+                sh ' git clone https://github.com/jgomezz/m6-sbp-c05-micro-user-service.git'
+            }
+        } // end 'Clone'
+    }
+}
+  
+```
+### Paso 11: Ejecutar el pipeline
+- Hacer clic en "Build Now"
+- Verificar que el pipeline se ejecute correctamente
+- Ver los logs de la ejecución
