@@ -156,7 +156,7 @@ pipeline {
 
 ### Paso 1: Configurar Jenkins para recibir Webhooks
 - En Jenkins activar "GitHub hook trigger for GITScm polling" en la configuración del pipeline
-  <img src="images/jenkins_webhooks.png" alt="GitHub hook trigger for GITScm polling" width="600"/>
+  <img src="images/jenkins_webhook.png" alt="GitHub hook trigger for GITScm polling" width="600"/>
 
 ### Paso 2: Configurar Webhook en GitHub
 - Ir a la configuración del repositorio en GitHub
