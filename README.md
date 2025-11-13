@@ -146,9 +146,22 @@ pipeline {
 
 ### Paso 3: Ejecutar el pipeline
 
-## TAREA
-
+## TAREA 1
 - Crear un repositorio unico para el microservice product-service
 - Crear un Jenkinsfile con las etapas de Clone, Compile, Test y Package
 - Configurar un pipeline en Jenkins que apunte al repositorio creado
 - Ejecutar el pipeline y verificar que todas las etapas se ejecuten correctamente
+
+## PARTE 3   : Configurar Webhooks en GitHub para Jenkins
+
+### Paso 1: Configurar Jenkins para recibir Webhooks
+- En Jenkins activar "GitHub hook trigger for GITScm polling" en la configuración del pipeline
+  <img src="images/jenkins_webhooks.png" alt="GitHub hook trigger for GITScm polling" width="600"/>
+
+### Paso 2: Configurar Webhook en GitHub
+- Ir a la configuración del repositorio en GitHub
+  <img src="images/github_webhook.png" alt="Github Webhook" width="600"/>
+
+### Paso 3: Probar el Webhook
+- Realizar  un cambio en el proyecto user-service y hacer un push a GitHub
+- Verificar que el pipeline en Jenkins se ejecute automáticamente

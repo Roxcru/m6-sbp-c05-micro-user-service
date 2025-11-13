@@ -26,7 +26,6 @@ class UserServiceTest {
     @Autowired
     private UserMapper userMapper;
 
-
     @Test
     void getUserById() {
         Long ID = 100L;
