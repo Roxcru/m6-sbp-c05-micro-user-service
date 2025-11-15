@@ -34,5 +34,4 @@ public class UserController {
     }
 
     // TO DO other endpoints (create, update, delete)
-    //
 }
