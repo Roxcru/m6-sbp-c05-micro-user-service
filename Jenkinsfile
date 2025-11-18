@@ -26,6 +26,12 @@ pipeline {
                 sh 'mvn package -DskipTests'
             }
         }
+        stage('Docker build') {
+            steps {
+                echo 'Build Docker image'
+                sh 'docker build -t user-service-cafs:1.0 .'
+            }
+        }
     }
 
     post {
