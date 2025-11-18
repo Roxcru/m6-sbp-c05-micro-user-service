@@ -32,6 +32,19 @@ pipeline {
                 sh 'docker build -t user-service-cafs:1.0 .'
             }
         }
+
+        stage('Docker Compose Restart') {
+            steps {
+                echo 'Restarting user services'
+                sh """
+                    docker compose up -d postgres-user-dev user-service-dev
+
+                """
+
+
+            }
+        }
+
     }
 
     post {
